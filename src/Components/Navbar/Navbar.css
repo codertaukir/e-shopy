@@ -1,0 +1,223 @@
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(39, 39, 39, 0.902);
+    color: white;
+    width: 100vw;
+    height: 75px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        & a {
+
+            color: white;
+            text-decoration: none;
+            svg {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+        }
+
+
+    }
+
+    & .hambarger{
+        display: none;
+    }
+
+    & .searchbar {
+
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & input {
+            outline: none;
+            width: 440px;
+            height: 45px;
+            border-radius: 20px;
+            padding-left: 20px;
+            font-size: 17px;
+        }
+
+        & .search-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0px;
+            height: 41px;
+            border: 1px solid black;
+            width: 60px;
+            border-radius: 0px 20px 20px 0px;
+            border: none;
+            cursor: pointer;
+
+            & svg {
+                width: 40%;
+                height: 40%;
+
+            }
+        }
+        & .search-btn2{
+            display: none;
+        }
+
+        & .search-btn:active {
+            transform: scale(0.98);
+        }
+    }
+
+    .list-items {
+        display: flex;
+        gap: 50px;
+
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            & li {
+
+                list-style-type: none;
+
+                & a{
+                    color:white;
+                    text-decoration: none;
+                }
+
+                & a:hover{
+                    color: rgb(214, 212, 212);
+                }
+
+            }
+
+
+        }
+
+        & .addtocart-div {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            & .addtocart {
+
+                padding: 5px 15px 5px 15px;
+                color: rgb(254, 254, 254);
+                align-items: center;
+                justify-content: center;
+
+                & svg {
+                    width: 35px;
+                    height: 35px;
+
+                }
+            }
+
+            & h4 {
+                position: absolute;
+                top: 4px;
+                right: 10px;
+                font-size: 13px;
+                text-align: center;
+                height: 17px;
+                width: 17px;
+                background-color: black;
+                border-radius: 20px;
+            }
+        }
+    }
+
+
+}
+
+
+@media (max-width : 976px) {
+    #navbar {
+
+        & .hambarger{
+            display: flex;
+            cursor: pointer;
+            
+
+            svg{
+                height: 30px;
+                width: 30px;
+                transition: all 0.5s ease-in-out;
+                
+            }
+        }
+
+       
+        
+        & .ham{
+            display: none;
+        }
+
+        .list-items {
+            display: none;
+        }
+
+        & .searchbar {
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+            & input {
+                display: none;
+                outline: none;
+                width: 300px;
+                height: 33px;
+                border-radius: 20px;
+                padding-left: 20px;
+                font-size: 17px;
+            }
+            
+            & .search-btn{
+                display: none;
+            }
+
+            & .search-btn2 {
+                background-color: rgba(63, 60, 60, 0.902);
+                display: flex;
+                align-items: center;
+                justify-content: center;                
+                width: 40px;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all ;
+
+                & svg{
+                    color: white;
+                    width: 20px;
+                    height: 20px;
+                    
+                }
+                
+            }
+
+            & .search-btn2:active{
+                background-color: rgba(142, 139, 139, 0.683);
+                
+                & svg{
+                    color: rgb(69, 68, 68);
+                }
+            }
+        }
+    }
+}
